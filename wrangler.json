@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "image-dad",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "vars": {},
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "image-dad-db",
+      "database_id": "4d57c781-a62d-4038-bc6a-a0965e54446d",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "bucket_name": "image-dad"
+    }
+  ]
+}
